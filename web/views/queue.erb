@@ -16,7 +16,7 @@
   </thead>
   <% @messages.each_with_index do |msg, index| %>
     <tr>
-      <td><%= msg['class'] %></td>
+      <td><%= h(msg['class']) %></td>
       <td>
         <% if msg['args'] and msg['args'].to_s.size > 100 %>
           <%= h(msg['args'].inspect[0..100]) + "... " %>
